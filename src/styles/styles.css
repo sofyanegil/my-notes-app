@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+  --pal1: #789395;
+  --pal2: #94b49f;
+  --pal3: #b4cfb0;
+  --pal4: #e5e3c9;
+  --pal5: #d82148;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #e9e8eb;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  min-width: 44px;
+  min-height: 44px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+  margin: 0 5px;
+}
+
+.btn-primary {
+  background-color: var(--pal2);
+}
+
+.btn-primary:hover {
+  background-color: #728c7b;
+}
+
+.btn-danger {
+  background-color: var(--pal5);
+}
+
+.btn-danger:hover {
+  background-color: #bb1d3f;
+}
+
+.btn-add {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  font-weight: 400;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: var(--pal4);
+  background-color: var(--pal2);
+}
+
+header {
+  background-color: var(--pal1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.notes-header {
+  color: var(--pal4);
+}
+
+.note-search {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.note-search input {
+  background: #f5f1ff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 5px;
+  width: 300px;
+  height: 50px;
+}
+
+.notes-form {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hide {
+  display: none;
+}
+
+.notes-input {
+  width: 40%;
+  position: relative;
+  margin: 40px auto;
+  background-color: var(--pal4);
+  padding: 20px;
+  text-align: center;
+  border-left: 20px solid var(--pal1);
+}
+
+.close {
+  margin: 0;
+  border-radius: 0;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #bb1d3f;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #8a162f;
+}
+
+.input {
+  text-align: left;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input input[type='text'],
+.input textarea {
+  min-height: 60px;
+  background: #f5f1ff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.input textarea {
+  height: 200px;
+}
+
+.flex-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-max {
+  font-size: 12px;
+}
+
+.notes-list {
+  width: 90%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.notes-list h2 {
+  background-color: #ddd;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.notes-list__container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.no-notes {
+  font-weight: bold;
+}
+
+.notes-item {
+  margin: 5px;
+  padding: 15px;
+  flex: 25%;
+}
+
+.notes-item__body {
+  text-align: left;
+  background-color: var(--pal4);
+  padding: 20px;
+  border-left: 5px solid var(--pal1);
+  width: 100%;
+  min-height: 300px;
+}
+
+.notes-item__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.notes-item__date {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(62, 57, 57);
+  background-color: var(--pal1);
+  color: white;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.notes-item__text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgb(62, 57, 57);
+  line-height: 1.5;
+}
+
+.notes-item__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+footer {
+  background-color: var(--pal1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  color: var(--pal4);
+}
+
+footer a {
+  color: var(--pal4);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .notes-input {
+    width: 100%;
+  }
+
+  .input textarea {
+    height: 100px;
+  }
+}
